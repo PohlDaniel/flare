@@ -25,7 +25,7 @@ SDL2_ttf-2-0.15		https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-
 					-> use SDL_ttf.h, the build SDL2_ttf.dll, SDL2_ttf.lib and libfreetype-6.dll, zlib1.dll
 					
 flare 			https://github.com/flareteam/flare-engine
-					https://github.com/flareteam/flare-game	
+			https://github.com/flareteam/flare-game	
 					-> remove Find_Package(SDL2), Find_Package(SDL2_image), Find_Package(SDL2_mixer), Find_Package(SDL2_ttf)  from CMakeLists.txt (it seems more easy to link it manually from Visual Studio)
 					-> use cmake to configure the solution
 					-> linkt the project againts SDL2, SDL2_image, SDL2_mixer and SDL2_ttf
