@@ -1,4 +1,4 @@
-SDL2 2.0.14			https://www.libsdl.org/release/SDL2-devel-2.0.14-VC.zip
+SDL2 2.0.14		https://www.libsdl.org/release/SDL2-devel-2.0.14-VC.zip
 					-> use solution of VisualC
 					-> build SDL and SDLmain
 					-> use SDL2-2.0.14/include and the build SDL2.dll, SDL2.lib, SDL2main.lib
@@ -24,7 +24,7 @@ SDL2_ttf-2-0.15		https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-
 					-> add DLL_EXPORT under Visual Studio Project ->properties -> C/C++ -> Preprocessor -> Preprocessor Definition before building projects
 					-> use SDL_ttf.h, the build SDL2_ttf.dll, SDL2_ttf.lib and libfreetype-6.dll, zlib1.dll
 					
-flare 				https://github.com/flareteam/flare-engine
+flare 			https://github.com/flareteam/flare-engine
 					https://github.com/flareteam/flare-game	
 					-> remove Find_Package(SDL2), Find_Package(SDL2_image), Find_Package(SDL2_mixer), Find_Package(SDL2_ttf)  from CMakeLists.txt (it seems more easy to link it manually from Visual Studio)
 					-> use cmake to configure the solution
