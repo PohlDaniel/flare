@@ -1,0 +1,34 @@
+SDL2 2.0.14			https://www.libsdl.org/release/SDL2-devel-2.0.14-VC.zip
+					-> use solution of VisualC
+					-> build SDL and SDLmain
+					-> use SDL2-2.0.14/include and the build SDL2.dll, SDL2.lib, SDL2main.lib
+
+SDL2_image-2.0.5	https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.5-VC.zip
+					-> use solution of VisualC
+					-> add the SDL2-2.0.14/include folder to the project "SDL2_image"
+					-> add the SDL2 library path to the project "SDL2_image"
+					-> add DLL_EXPORT under Visual Studio Project ->properties -> C/C++ -> Preprocessor -> Preprocessor Definition before building projects
+					-> use SDL_image.h, the build SDL2_image.dll, SDL2_image.lib and libjpeg-9.dll, libpng16-16.dll, libtif-5.dll, libwebp-7.dll, zlib1.dll
+					
+SDL2_mixer-2.0.4	https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-devel-2.0.4-VC.zip
+					-> use solution of VisualC
+					-> add the SDL2-2.0.14/include folder to the projects "native_midi", "timidity" and "SDL2_mixer"
+					-> add the SDL2 library path to the project "SDL2_mixer" 
+					-> add DLL_EXPORT under Visual Studio Project ->properties -> C/C++ -> Preprocessor -> Preprocessor Definition before building projects
+					-> use SDL_mixer.h, the build SDL2_mixer.dll, SDL2_mixer.lib and libFLAC-8.dll, libmodplug-1.dll, libmpg123.dll, libogg-0.dll, libopus-0.dll, libopusfile-0.dll, libvorbis-0.dll, libvorbisfile-3.dll
+					
+SDL2_ttf-2-0.15		https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.0.15-VC.zip
+					-> use solution of VisualC
+					-> add the SDL2-2.0.14/include folder to the project "SDL2_ttf"
+					-> add the SDL2 library path to the project "SDL2_ttf" 
+					-> add DLL_EXPORT under Visual Studio Project ->properties -> C/C++ -> Preprocessor -> Preprocessor Definition before building projects
+					-> use SDL_ttf.h, the build SDL2_ttf.dll, SDL2_ttf.lib and libfreetype-6.dll, zlib1.dll
+					
+flare 				https://github.com/flareteam/flare-engine
+					https://github.com/flareteam/flare-game	
+					-> remove Find_Package(SDL2), Find_Package(SDL2_image), Find_Package(SDL2_mixer), Find_Package(SDL2_ttf)  from CMakeLists.txt (it seems more easy to linkt it manually from Visual Studio)
+					-> use cmake to configure the solution
+					-> linkt the project againts SDL2, SDL2_image, SDL2_mixer and SDL2_ttf
+					-> add #define SDL_MAIN_HANDLED at the begin off main.cpp
+					-> build the project "flare"
+					-> copy together the runtime similar to https://sourceforge.net/projects/flare-game/files/Windows/flare-game_v1.11.zip/download
